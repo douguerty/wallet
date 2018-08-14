@@ -1,0 +1,7 @@
+.humor, .label {
+    cursor: pointer!important;
+}
+
+#check-data {
+	visibility: hidden!important;
+}
