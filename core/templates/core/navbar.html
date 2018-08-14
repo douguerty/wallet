@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="{% url 'core:home' %}">Carteira</a>
+      <a class="navbar-brand" href="{% url 'core:home' %}">Wallet</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -12,8 +12,10 @@
             <ul class="dropdown-menu">
               <li><a href="#"><i class="fas fa-user-edit"></i> Informaçoẽs pessoais</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="#"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+              <li><a href="{% url 'core:logout' %}"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
             </ul>
+          {% else %}
+            <a href="{% url 'core:login' %}"> Entrar <i class="fas fa-sign-in-alt"></i></a>
           {% endif %}
         </li>
       </ul>

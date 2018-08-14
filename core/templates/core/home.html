@@ -7,6 +7,14 @@
 {% include "core/navbar.html" %}
 {% include "core/navbar-v.html" %}
 
-
+{% if request.user.is_authenticated %}
+	<div class="container">
+		<div class="row">
+			<span class="label label-info info"><i class="fas fa-university fa-3x"></i>
+				<b> Saldo atual <span class="badge info">4</span></b>
+			</span>
+		</div>
+	</div>
+{% endif %}
 
 {% endblock %}
