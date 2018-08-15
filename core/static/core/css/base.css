@@ -86,5 +86,20 @@
 }
 
 .info {
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+
+.info-label {
+  font-size: 1.4rem;
+}
+
+.text-ver-mais, .text-ver-mais:hover {
+  color: #4286f4;
+  position: relative;
+  padding-left: 100px;
+}
+
+.btn-despesas {
+  margin-right: 50px;
+  margin-left: 80px;
 }

@@ -8,11 +8,38 @@
 {% include "core/navbar-v.html" %}
 
 {% if request.user.is_authenticated %}
-	<div class="container">
+	<div class="container" align="center">
 		<div class="row">
-			<span class="label label-info info"><i class="fas fa-university fa-3x"></i>
-				<b> Saldo atual <span class="badge info">4</span></b>
-			</span>
+			<div class="col-md-3" align="center">
+				<button class="btn btn-info info"><i class="fas fa-university fa-2x"></i>
+					<b> Saldo atual <span class="badge info">4</span></b>
+				</button>
+			</div>
+			<div class="col-md-3" align="center">
+				<button class="btn btn-success info"><i class="fas fa-level-up-alt fa-2x"></i>
+					<b> Receitas <span class="badge info">4</span></b>
+				</button>
+			</div>
+			<div class="col-md-3" align="center">
+				<button class="btn btn-danger info"><i class="fas fa-level-down-alt fa-2x"></i>
+					<b> Despesas <span class="badge info">4</span></b>
+				</button>
+			</div>
+			<div class="col-md-3" align="center">
+				<button class="btn btn-primary info"><i class="fas fa-credit-card fa-2x"></i>
+					<b> Cartão de crédito <span class="badge info">4</span></b>
+				</button>
+			</div>
+		</div>
+		<br>
+		<div class="row" align="center">
+			<div class="col-md-5 btn btn-despesas">
+				<b class="info-label">Despesas do mês <a href="#" class="text-ver-mais">Ver mais</a></b>
+			</div>
+
+			<div class="col-md-5 btn">
+				<b class="info-label">Receitas do mês <a href="#" class="text-ver-mais">Ver mais</a></b>
+			</div>
 		</div>
 	</div>
 {% endif %}
