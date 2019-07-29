@@ -36,3 +36,18 @@ class RegistrationView(CreateView):
     form_class = CustomUserCreationForm
     success_url = reverse_lazy('core:login')
     template_name = "core/nova_conta.html"
+
+
+def info(request):
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            form = forms.InfoForm(request.POST, instance=request.user)
+            if form.is_valid():
+                form.save()
+        else:
+            form = forms.InfoForm(instance=request.user)
+        context = {
+            'form': form
+        }
+        return render(request, 'core/info.html', context)
+    return HttpResponseRedirect(reverse('core:home'))

@@ -103,3 +103,8 @@
   margin-right: 50px;
   margin-left: 80px;
 }
+
+.row-nav {
+    margin-top: 50px !important;
+    margin-left: 50px !important;
+}

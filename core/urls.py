@@ -9,4 +9,5 @@ urlpatterns = [
     path('login/', views.login_view, name='login'),
     path('logout/', views.logout_view, name='logout'),
     path('nova_conta/', views.RegistrationView.as_view(), name='nova_conta'),
+    path('info/', views.info, name='info'),
 ]

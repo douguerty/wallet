@@ -1,0 +1,38 @@
+{% extends "core/base.html" %}
+
+{% block title %}Informações{% endblock %}
+
+{% block content %}
+
+    {% include "core/navbar.html" %}
+    {% include "core/navbar-v.html" %}
+
+    <div class="row row-nav">
+        <div class="col-md-6 col-md-offset-3 text-center">
+            <h1>Informações</h1>
+            <form method="post" class="text-left">
+                {% csrf_token %}
+                {% if form %}
+                    {% for f in form %}
+                        {{ f.label }}
+                        {{ f }}
+                        <br>
+                    {% endfor %}
+                {% else %}
+                    <h3>Não existe formulario.</h3>
+                {% endif %}
+                <hr>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+
+        </div>
+    </div>
+
+{% endblock %}
